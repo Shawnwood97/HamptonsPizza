@@ -1,2 +1,12 @@
 $mainText: #BF9930;
 $secText: #D0DDD7;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(/images/background.png);
+}

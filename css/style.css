@@ -1,1 +1,74 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(/images/background.png);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: -ms-grid;
+  display: grid;
+}
+
+.splash {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+}
+
+.splash > img {
+  width: 100%;
+  min-height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+.logo {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.logo img {
+  height: 100px;
+}
+
+nav {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.menu {
+  display: none;
+}
+
+.splash_text {
+  position: absolute;
+  place-self: center;
+  text-align: center;
+}
+
+.splash_text h1 {
+  font-size: 36px;
+  color: #BF9930;
+}
+
+.splash_text p {
+  color: #D0DDD7;
+}
+/*# sourceMappingURL=style.css.map */

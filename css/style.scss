@@ -1,1 +1,56 @@
-@import '_global.scss'
+@import '_global.scss';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+}
+
+.splash {
+  position: relative;
+  display: grid;
+  >img {
+    width: 100%;
+    min-height: 100vh; 
+    object-fit: cover;
+  }
+}
+
+header {
+  display: grid;
+  grid-auto-flow: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+.logo {
+  justify-self: center;
+  img {
+    height: 100px;
+  }
+}
+
+nav {
+  justify-self: end;
+}
+
+.menu {
+  display: none;
+}
+
+.splash_text {
+  position: absolute;
+  place-self: center;
+  text-align: center;
+  
+  h1 {
+    font-size: 36px;
+    color: $mainText;
+  }
+
+  p {
+    color: $secText;
+  }
+}
