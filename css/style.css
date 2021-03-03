@@ -73,19 +73,27 @@ nav {
 }
 
 .boxes {
-  padding: 15px;
   text-align: center;
 }
 
 .boxes .box > img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 25px;
+  padding: 15px;
 }
 
 .boxes .box > h2 {
   display: inline-block;
   color: #D0DDD7;
   border-bottom: 2px solid #BF9930;
-  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.boxes .box:nth-child(2) {
+  background: #fff;
+}
+
+.boxes .box:nth-child(2) h2 {
+  color: #161616;
 }
 /*# sourceMappingURL=style.css.map */

@@ -3,6 +3,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   display: grid;
+  // row-gap: 20px;
 }
 
 .splash {
@@ -56,19 +57,27 @@ nav {
 }
 
 .boxes {
-  padding: 15px;
+  // padding: 0 15px;
   text-align: center;
-  
+
   .box {
     >img {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 25px;
+      padding: 15px;
         }
     >h2 {
       display: inline-block;
       color: $secText;
       border-bottom: 2px solid $mainText;
-      margin-bottom: 10px;
+      padding-top: 10px;
        }
+
+       &:nth-child(2) {
+        background: #fff;
+        h2 {
+          color: $altText;
+        }
+      }
       }  
   }
