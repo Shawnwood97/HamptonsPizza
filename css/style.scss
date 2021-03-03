@@ -54,3 +54,21 @@ nav {
     color: $secText;
   }
 }
+
+.boxes {
+  padding: 15px;
+  text-align: center;
+  
+  .box {
+    >img {
+      width: 100%;
+      border-radius: 10px;
+        }
+    >h2 {
+      display: inline-block;
+      color: $secText;
+      border-bottom: 2px solid $mainText;
+      margin-bottom: 10px;
+       }
+      }  
+  }

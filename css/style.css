@@ -71,4 +71,21 @@ nav {
 .splash_text p {
   color: #D0DDD7;
 }
+
+.boxes {
+  padding: 15px;
+  text-align: center;
+}
+
+.boxes .box > img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.boxes .box > h2 {
+  display: inline-block;
+  color: #D0DDD7;
+  border-bottom: 2px solid #BF9930;
+  margin-bottom: 10px;
+}
 /*# sourceMappingURL=style.css.map */
