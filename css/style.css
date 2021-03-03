@@ -39,22 +39,105 @@ header {
   padding: 10px;
 }
 
-.logo {
+header .phone_btn {
+  z-index: 9998;
+}
+
+header .logo {
   -ms-grid-column-align: center;
       justify-self: center;
 }
 
-.logo img {
+header .logo img {
   height: 100px;
 }
 
-nav {
+header nav {
   -ms-grid-column-align: end;
       justify-self: end;
 }
 
-.menu {
-  display: none;
+header .hamburger .menu_checkbox {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  opacity: 0;
+  z-index: 9999;
+}
+
+header .hamburger .menu_checkbox:hover {
+  cursor: pointer;
+}
+
+header .hamburger .menu_checkbox:checked ~ .menu {
+  top: 0;
+  opacity: 1;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+header .hamburger .menu_checkbox:checked ~ .hamburger_container {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+header .hamburger_container {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: 9998;
+  position: relative;
+}
+
+header .hamburger_container .ham_line {
+  height: 4px;
+  width: 30px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+header .hamburger_container #ham_line_1 {
+  width: 10px;
+}
+
+header .hamburger_container #ham_line_2 {
+  width: 20px;
+}
+
+header .menu {
+  background: url(/images/background.png);
+  position: absolute;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  top: -47vh;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  z-index: 9997;
+}
+
+header .menu #current {
+  border-bottom: 5px solid #BF9930;
+  padding: 5px 5px 3px 5px;
+  border-radius: 10px;
+}
+
+header .menu a {
+  padding: 10px 0;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+}
+
+header .menu a:hover {
+  color: #BF9930;
 }
 
 .splash_text {
@@ -95,5 +178,11 @@ nav {
 
 .boxes .box:nth-child(2) h2 {
   color: #161616;
+}
+
+.map_embed iframe {
+  width: 100%;
+  border: 0;
+  height: 250px;
 }
 /*# sourceMappingURL=style.css.map */

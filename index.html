@@ -17,7 +17,7 @@
 <body>
   <section class="splash"><img src="/images/pizzasplash.jpg" alt="Pizza on a wood slab with fire in the background">
     <header>
-      <div>
+      <div class="phone_btn">
         <a href="tel:7805555555"><img src="/images/phone.png"
             alt="Image of a phone, to be clicked to make call the restaurant">
         </a>
@@ -31,18 +31,21 @@
           <input type="checkbox" class="menu_checkbox">
 
           <div class="hamburger_container">
-            <span class="ham_line_1"></span>
-            <span class="ham_line_2"></span>
-            <span class="ham_line_3"></span>
+            <span id="ham_line_1" class="ham_line"></span>
+            <span id="ham_line_2" class="ham_line"></span>
+            <span id="ham_line_3" class="ham_line"></span>
           </div>
 
-          <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Chat With Me</a></li>
-          </ul>
+          <div class="menu">
+            <a href="#" class="logo"><img src="/images/logo.png"
+                alt="Hamptons Pizza's Logo, shaped like a pizza slice, Hamptons Pizza on the crust, and HP in the middle">
+            </a>
+            <a href="#" id="current">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">Gallery</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+          </div>
         </div>
       </nav>
     </header>
@@ -66,6 +69,11 @@
         <h2>Featured Pasta</h2>
         <img src="/images/bolognese.jpg" alt="Picture of Spaghetti Bolognese">
       </article>
+    </section>
+    <section class="map_embed">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2240.641454911408!2d-113.66716935039834!3d53.488529347607596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x539f8abb417fd27f%3A0xd4142ea2a1df4f47!2sPizza%2073!5e0!3m2!1sen!2sca!4v1614740509537!5m2!1sen!2sca"
+        allowfullscreen="" loading="lazy"></iframe>
     </section>
   </main>
 </body>
