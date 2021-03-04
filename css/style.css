@@ -31,16 +31,18 @@ body {
 header {
   display: -ms-grid;
   display: grid;
-  grid-auto-flow: column;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   padding: 10px;
+  z-index: 10000;
 }
 
 header .phone_btn {
   z-index: 9998;
+  position: fixed;
+  top: 0;
+  padding-top: 10px;
 }
 
 header .logo {
@@ -53,6 +55,9 @@ header .logo img {
 }
 
 header nav {
+  position: fixed;
+  right: 0;
+  padding-right: 10px;
   -ms-grid-column-align: end;
       justify-self: end;
 }
@@ -110,7 +115,7 @@ header .hamburger_container #ham_line_2 {
 
 header .menu {
   background: url(/images/background.png);
-  position: absolute;
+  position: fixed;
   width: 100%;
   display: -ms-grid;
   display: grid;
