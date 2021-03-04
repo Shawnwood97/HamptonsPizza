@@ -1,4 +1,5 @@
 @import '_global.scss';
+@import '_header.scss';
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -12,117 +13,6 @@ body {
     width: 100%;
     min-height: 100vh; 
     object-fit: cover;
-  }
-}
-
-header {
-  display: grid;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 10px;
-  z-index: 10000;
-
-  .phone_btn {
-    z-index: 9998;
-    position: fixed;
-    top: 0;
-    padding-top: 10px;
-  }
-
-  .logo {
-    justify-self: center;
-    img {
-      height: 100px;
-    }
-  }
-  
-  nav {
-    position: fixed;
-    right: 0;
-    padding-right: 10px;
-    justify-self: end;
-  }
-
-.hamburger {
-
-  .menu_checkbox {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    opacity: 0;
-    z-index: 9999;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &:checked {
-    ~ .menu {
-      top: 0;
-      opacity: 1;
-      transition: all .5s ease-in-out;
-    }
-
-    ~ .hamburger_container {
-      transform: rotate(-180deg);
-    }
-    }
-  }
-}
-
-  .hamburger_container {
-    display: grid;
-    place-items: center;
-    width: 30px;
-    height: 30px;
-    transition: .5s;
-    z-index: 9998;
-    position: relative;
-  
-    .ham_line {
-      height: 4px;
-      width: 30px;
-      background: #fff;
-      border-radius: 2px;
-    }
-
-    #ham_line_1 {
-      width: 10px;
-    }
-    #ham_line_2 {
-      width: 20px;
-    }
-  }
-
-  .menu {
-    background: url(/images/background.png);
-    position: fixed;
-    width: 100%;
-    display: grid;
-    justify-items: center;
-    top: -47vh;
-    left: 0;
-    opacity: 0;
-    transition: all .5s ease-in-out;
-    z-index: 9997;
-
-    #current {
-      border-bottom: 5px solid $mainText;
-      padding: 5px 5px 3px 5px;
-      border-radius: 10px;
-    }
-
-    a{
-      padding: 10px 0;
-      text-decoration: none;
-      font-weight: 600;
-      color: #fff;
-
-      &:hover {
-        color: $mainText;
-      }
-    }
   }
 }
 

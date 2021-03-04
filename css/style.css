@@ -9,25 +9,6 @@ body {
   background: url(/images/background.png);
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  display: -ms-grid;
-  display: grid;
-}
-
-.splash {
-  position: relative;
-  display: -ms-grid;
-  display: grid;
-}
-
-.splash > img {
-  width: 100%;
-  min-height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 header {
   display: -ms-grid;
   display: grid;
@@ -143,6 +124,25 @@ header .menu a {
 
 header .menu a:hover {
   color: #BF9930;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: -ms-grid;
+  display: grid;
+}
+
+.splash {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+}
+
+.splash > img {
+  width: 100%;
+  min-height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .splash_text {
