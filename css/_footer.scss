@@ -1,0 +1,14 @@
+footer {
+  display: grid;
+  place-items: center;
+  margin: 10px 0;
+
+  .socials>a>img {
+    padding: 10px;
+  }
+
+  >span {
+    color: $secText;
+    font-size: .8rem;
+  }
+}
