@@ -11,3 +11,23 @@ $altText: #161616;
 body {
   background: url(/images/background.png);
 }
+
+@mixin section-header {
+  display: inline-block;
+  color: $secText;
+  border-bottom: 2px solid $mainText;
+  padding-top: 10px;
+}
+
+@mixin item-info {
+  .divider {
+    color: $mainText;
+  }
+  .item_size {
+    color: $secText;
+  }
+
+  .item_price {
+    color: $mainText
+  }
+}

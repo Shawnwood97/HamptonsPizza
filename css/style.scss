@@ -12,7 +12,7 @@ body {
   display: grid;
   >img {
     width: 100%;
-    min-height: 100vh; 
+    height: 100vh; 
     object-fit: cover;
   }
 }
@@ -42,27 +42,23 @@ body {
       padding: 15px;
         }
     >h2 {
-      display: inline-block;
-      color: $secText;
-      border-bottom: 2px solid $mainText;
-      padding-top: 10px;
+      @include section-header;
        }
-
-       &:nth-child(even) {
-        background: #fff;
-        h2 {
-          color: $altText;
-        }
-      }
     }  
   }
 
 .map_embed {
+  text-align: center;
+  >h2 {
+    @include section-header;
+    text-align: center;
+     }
   iframe {
-    filter: invert(100%);
+    // filter: invert(100%);
     width: 100%;
     border: 0;
     height: 250px;
+    padding-top: 15px;
   }
 }
 .carousel {
@@ -74,4 +70,104 @@ body {
   > img {
     width: 100%;
   }
+}
+
+// Menu Page Styling
+
+.menu_splash {
+  position: relative;
+  display: grid;
+  >img {
+    opacity: .4;
+    width: 100%;
+    height: 50vh; 
+    object-fit: cover;
+  }
+}
+
+.food_menu {
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+    >article {
+        opacity: 0;
+        transform: translateX(101%);
+        transition: .5s;
+        position: absolute;
+        top:20px;
+        width: 100%;
+
+        >h2 {
+          @include section-header;
+         }
+       }
+       >article:nth-child(even) {
+         transform: translateX(-101%);
+       }
+  }  
+
+  #pizza:checked ~ #pizza_menu,
+  #pasta:checked ~ #pasta_menu,
+  #drinks:checked ~ #drinks_menu,
+  #apps:checked ~ #apps_menu {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  #pizza_menu {
+    position: relative;
+    top: 0;
+  }
+
+
+.menu_box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 5px;
+
+  >div {
+    width: 100%;
+    margin: 10px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $mainText;
+ 
+  >img {
+    width: 100%;
+    // border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+
+    } 
+  }
+}
+
+.item_name {
+  color: $secText;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.menu_price {
+  color: $mainText;
+}
+
+.item_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 5px;
+
+@include item-info;
+}
+
+.item_info_double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include item-info;
+}
+
+.item_info_single {
+  display: grid;
+  @include item-info;
 }
