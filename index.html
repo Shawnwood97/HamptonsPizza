@@ -41,7 +41,7 @@
                 alt="Hamptons Pizza's Logo, shaped like a pizza slice, Hamptons Pizza on the crust, and HP in the middle">
             </a>
             <a href="#" id="current">Home</a>
-            <a href="#">Menu</a>
+            <a href="/pages/menu.html">Menu</a>
             <a href="#">Gallery</a>
             <a href="#">About Us</a>
             <a href="#">Contact Us</a>
@@ -56,29 +56,111 @@
     </div>
   </section>
   <main>
-    <section class="boxes">
-      <article class="box">
-        <h2>What We Offer</h2>
-        <img src="/images/local.jpg" id="image1" alt="Picture of vegtables in blue baskets">
-      </article>
-      <article class="box">
-        <h2>Featured Pizza</h2>
-        <img src="/images/pepperoni.jpg" alt="Picture of pepperroni pizza">
-      </article>
-      <article class="box">
-        <h2>Featured Pasta</h2>
-        <img src="/images/bolognese.jpg" alt="Picture of Spaghetti Bolognese">
-      </article>
+    <div class="menu_container">
+      <section class="boxes">
+        <hr>
+        <article class="offer">
+          <h2>What We Offer</h2>
+          <div class="caro_box">
+            <div class="empty_space"></div>
+            <input type="radio" name="offer_caro" id="locally_sourced" checked>
+            <label for="locally_sourced"></label>
+            <input type="radio" name="offer_caro" id="gluten_free">
+            <label for="gluten_free"></label>
+            <input type="radio" name="offer_caro" id="res_special">
+            <label for="res_special"></label>
 
-    </section>
-    <section class="map_embed">
-      <article class="box map_embed">
-        <h2>Our Location</h2>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2240.641454911408!2d-113.66716935039834!3d53.488529347607596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x539f8abb417fd27f%3A0xd4142ea2a1df4f47!2sPizza%2073!5e0!3m2!1sen!2sca!4v1614740509537!5m2!1sen!2sca"
-          allowfullscreen="" loading="lazy"></iframe>
-      </article>
-    </section>
+            <div class="caro_item" id="offer_item1">
+              <h3>Locally Sourced Ingredients</h3>
+              <img src="/images/local.jpg" alt="Picture of vegtables in blue baskets">
+              <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus exercitationem
+                obcaecati quos velit corrupti soluta.</p>
+            </div>
+            <div class="caro_item" id="offer_item2">
+              <h3>Gluten Free Crust</h3>
+              <img src="/images/gluten-free.jpg" alt="Picture of vegtables in blue baskets">
+              <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus exercitationem
+                obcaecati quos velit corrupti soluta.</p>
+            </div>
+            <div class="caro_item" id="offer_item3">
+              <h3>Reservation Specials</h3>
+              <img src="/images/reservation-specials.jpg" alt="Picture of vegtables in blue baskets">
+              <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus exercitationem
+                obcaecati quos velit corrupti soluta.</p>
+            </div>
+          </div>
+        </article>
+        <hr>
+        <article class="featured">
+          <h2>Featured Items</h2>
+          <div class="caro_box">
+            <div class="empty_space"></div>
+            <input type="radio" name="feat_caro" id="feat_pizza" checked>
+            <label for="feat_pizza"></label>
+            <input type="radio" name="feat_caro" id="feat_pasta">
+            <label for="feat_pasta"></label>
+            <input type="radio" name="feat_caro" id="feat_app">
+            <label for="feat_app"></label>
+            <input type="radio" name="feat_caro" id="feat_drink">
+            <label for="feat_drink"></label>
+
+            <div class="caro_item" id="feat_item1">
+              <p class="item_name">Pepperoni Pizza</p>
+              <img src="/images/menu/pepperoni.jpg" alt="Image of a brooklyn style pepperoni pizza">
+              <div class="item_info">
+                <p class="item_size">10"</p>
+                <p class="item_size">12"</p>
+                <p class="item_size">14"</p>
+                <p class="item_price">$22.99</p>
+                <p class="item_price">$29.99</p>
+                <p class="item_price">$34.99</p>
+              </div>
+            </div>
+            <div class="caro_item" id="feat_item2">
+              <p class="item_name">Spaghetti Bolognese</p>
+              <img src="/images/menu/bolognese.jpg" alt="Image of a plate of spaghetti bolognese">
+              <div class="item_info">
+                <p class="item_size">Small</p>
+                <p class="item_size">Medium</p>
+                <p class="item_size">Large</p>
+                <p class="item_price">$10.99</p>
+                <p class="item_price">$14.99</p>
+                <p class="item_price">$18.99</p>
+              </div>
+            </div>
+            <div class="caro_item" id="feat_item3">
+              <p class="item_name">Nachos</p>
+              <img src="/images/menu/nachos.jpg" alt="Image of a pan of cheesy nachos">
+              <div class="item_info">
+                <p class="item_size">Single</p>
+                <p class="item_size">Double</p>
+                <p class="item_size">Family</p>
+                <p class="item_price">$13.99</p>
+                <p class="item_price">$18.99</p>
+                <p class="item_price">$24.99</p>
+              </div>
+            </div>
+            <div class="caro_item" id="feat_item4">
+              <p class="item_name">Draft Beer</p>
+              <img src="/images/menu/beer.jpg" alt="Image of a glass of beer on a wooden ledge">
+              <div class="item_info_double">
+                <p class="item_size">12oz.</p>
+                <p class="item_size">20oz.</p>
+                <p class="item_price">$6.50</p>
+                <p class="item_price">$8.25</p>
+              </div>
+            </div>
+        </article>
+        <hr>
+        <article class="map_embed">
+          <h2>Our Location</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2240.641454911408!2d-113.66716935039834!3d53.488529347607596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x539f8abb417fd27f%3A0xd4142ea2a1df4f47!2sPizza%2073!5e0!3m2!1sen!2sca!4v1614740509537!5m2!1sen!2sca"
+            allowfullscreen="" loading="lazy"></iframe>
+        </article>
+      </section>
+    </div>
+    <hr>
 
   </main>
   <footer>

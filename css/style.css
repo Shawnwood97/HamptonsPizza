@@ -159,6 +159,7 @@ body {
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 30px;
 }
 
 .splash_text {
@@ -180,29 +181,100 @@ body {
   text-align: center;
 }
 
-.boxes .box > img {
+.boxes article > img {
   width: 100%;
-  border-radius: 25px;
-  padding: 15px;
+  padding: 15px 0;
 }
 
-.boxes .box > h2 {
+.boxes article > h2 {
   display: inline-block;
   color: #D0DDD7;
-  border-bottom: 2px solid #BF9930;
-  padding-top: 10px;
+  margin-top: 10px;
+  margin: 20px 0;
+}
+
+.caro_box {
+  position: relative;
+}
+
+.caro_box > label {
+  display: inline-block;
+  content: '';
+  margin: 20px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 14px solid #D0DDD7;
+}
+
+.caro_box > input {
+  display: none;
+}
+
+.caro_box > input:checked + label {
+  border-bottom: 14px solid #BF9930;
+}
+
+.caro_box > div {
+  width: 100%;
+}
+
+.caro_box > div > h3 {
+  color: #D0DDD7;
+  margin-bottom: 10px;
+}
+
+.caro_box > div > p {
+  color: #D0DDD7;
+  padding: 10px 5px;
+}
+
+.caro_box > div > img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.empty_space {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.caro_item {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.caro_item > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#locally_sourced:checked ~ #offer_item1,
+#gluten_free:checked ~ #offer_item2,
+#res_special:checked ~ #offer_item3,
+#feat_pizza:checked ~ #feat_item1,
+#feat_pasta:checked ~ #feat_item2,
+#feat_app:checked ~ #feat_item3,
+#feat_drink:checked ~ #feat_item4 {
+  opacity: 1;
 }
 
 .map_embed {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .map_embed > h2 {
   display: inline-block;
   color: #D0DDD7;
-  border-bottom: 2px solid #BF9930;
-  padding-top: 10px;
-  text-align: center;
+  margin-top: 10px;
 }
 
 .map_embed iframe {
@@ -210,18 +282,6 @@ body {
   border: 0;
   height: 250px;
   padding-top: 15px;
-}
-
-.carousel {
-  width: 100%;
-}
-
-.carousel > input {
-  display: none;
-}
-
-.carousel > img {
-  width: 100%;
 }
 
 .menu_splash {
@@ -236,6 +296,18 @@ body {
   height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 30px;
+}
+
+.menu_container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+hr {
+  border-color: #BF9930;
+  width: 50%;
+  margin-left: 25%;
 }
 
 .food_menu {
@@ -243,6 +315,21 @@ body {
   width: 100%;
   overflow: hidden;
   position: relative;
+  padding-top: 30px;
+}
+
+.food_menu > input[type="radio"] {
+  display: none;
+}
+
+.food_menu > input[type="radio"]:checked + label {
+  border-bottom: 2px solid #BF9930;
+}
+
+.food_menu > label {
+  color: #D0DDD7;
+  font-weight: bold;
+  padding: 10px 10px 3px 10px;
 }
 
 .food_menu > article {
@@ -252,15 +339,15 @@ body {
   -webkit-transition: .5s;
   transition: .5s;
   position: absolute;
-  top: 20px;
+  top: 50px;
   width: 100%;
+  margin-top: 30px;
 }
 
 .food_menu > article > h2 {
   display: inline-block;
   color: #D0DDD7;
-  border-bottom: 2px solid #BF9930;
-  padding-top: 10px;
+  margin-top: 10px;
 }
 
 .food_menu > article:nth-child(even) {
@@ -293,9 +380,7 @@ body {
 
 .menu_box > div {
   width: 100%;
-  margin: 10px 0;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #BF9930;
+  margin-bottom: 5px;
 }
 
 .menu_box > div > img {
@@ -307,7 +392,7 @@ body {
 
 .item_name {
   color: #D0DDD7;
-  padding-bottom: 10px;
+  padding: 15px 0;
   font-weight: bold;
 }
 
@@ -320,11 +405,8 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 15px;
   padding: 5px;
-}
-
-.item_info .divider {
-  color: #BF9930;
 }
 
 .item_info .item_size {
@@ -340,10 +422,8 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-}
-
-.item_info_double .divider {
-  color: #BF9930;
+  margin-bottom: 15px;
+  padding: 5px;
 }
 
 .item_info_double .item_size {
@@ -357,10 +437,8 @@ body {
 .item_info_single {
   display: -ms-grid;
   display: grid;
-}
-
-.item_info_single .divider {
-  color: #BF9930;
+  margin-bottom: 15px;
+  padding: 5px;
 }
 
 .item_info_single .item_size {

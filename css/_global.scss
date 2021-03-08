@@ -15,14 +15,14 @@ body {
 @mixin section-header {
   display: inline-block;
   color: $secText;
-  border-bottom: 2px solid $mainText;
-  padding-top: 10px;
+  // border-bottom: 2px solid $mainText;
+  margin-top: 10px;
 }
 
 @mixin item-info {
-  .divider {
-    color: $mainText;
-  }
+  margin-bottom: 15px;
+  padding: 5px;
+
   .item_size {
     color: $secText;
   }
