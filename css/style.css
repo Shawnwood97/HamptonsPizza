@@ -101,6 +101,8 @@ header .menu {
   height: 100%;
   display: -ms-grid;
   display: grid;
+  -ms-grid-rows: 200px auto;
+      grid-template-rows: 200px auto;
   justify-items: center;
   top: -200vh;
   left: 0;
@@ -177,6 +179,10 @@ body {
 
 .splash_text p {
   color: #D0DDD7;
+}
+
+label:hover {
+  cursor: pointer;
 }
 
 .boxes {

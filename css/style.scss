@@ -34,6 +34,12 @@ body {
   }
 }
 
+label {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .boxes {
   text-align: center;
 
@@ -315,3 +321,5 @@ hr {
     margin: auto;
   }
 }
+
+.none {}
