@@ -40,7 +40,6 @@ body {
   article {
     >img {
       width: 100%;
-      // border-radius: 25px;
       padding: 15px 0;
     }
 
@@ -118,8 +117,7 @@ body {
 #res_special:checked~#offer_item3,
 #feat_pizza:checked~#feat_item1,
 #feat_pasta:checked~#feat_item2,
-#feat_app:checked~#feat_item3,
-#feat_drink:checked~#feat_item4 {
+#feat_app:checked~#feat_item3 {
   opacity: 1;
 }
 
@@ -283,4 +281,37 @@ hr {
 .item_info_single {
   display: grid;
   @include item-info;
+}
+
+@media only screen and (min-width: 1000px) {
+  .caro_box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 10px;
+
+    >.empty_space {
+      display: none;
+    }
+
+    >.caro_item {
+      width: 100%;
+      height: 350px;
+      position: relative;
+      top: 0;
+      left: 0;
+
+      opacity: 1;
+    }
+
+    >label {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .menu_container {
+    max-width: 550px;
+    margin: auto;
+  }
 }
