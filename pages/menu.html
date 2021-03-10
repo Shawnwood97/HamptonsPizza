@@ -13,7 +13,11 @@
 </head>
 
 <body>
-  <section class="menu_splash"><img src="/images/menu-splash.jpg"
+  <div class="sticky_header">
+    <div class="call_order">Call to order: <span>780-555-555</span></div>
+    <div class="visit_order">Visit to order: <span>5240 199 St NW, Edmonton, AB T6M 0E4</span></div>
+  </div>
+  <section class="half_splash"><img src="/images/menu-splash.jpg"
       alt="Pizza on a wood slab with fire in the background">
     <header class="header">
 
@@ -36,7 +40,7 @@
             <span id="ham_line_3" class="ham_line"></span>
           </div>
 
-          <div class="menu">
+          <div class="mobile_nav">
             <a href="../index.html" class="logo"><img src="/images/logo.png"
                 alt="Hamptons Pizza's Logo, shaped like a pizza slice, Hamptons Pizza on the crust, and HP in the middle">
             </a>
@@ -45,6 +49,12 @@
             <span><a href="#">About Us</a></span>
             <span><a href="#">Contact Us</a></span>
           </div>
+        </div>
+        <div class="full_nav">
+          <span><a href="../index.html">Home</a></span>
+          <span><a href="#" id="current1">Menu</a></span>
+          <span><a href="./about.html">About Us</a></span>
+          <span><a href="#">Contact Us</a></span>
         </div>
       </nav>
     </header>
@@ -55,7 +65,7 @@
   </section>
 
   <main>
-    <div class="menu_container">
+    <div class="container">
       <hr>
       <section class="food_menu">
         <input type="radio" name="menu" id="pizza" checked>
