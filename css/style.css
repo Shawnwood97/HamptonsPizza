@@ -650,6 +650,43 @@ hr:last-child {
   padding: 0 5px;
 }
 
+.feedback_opt {
+  margin: auto;
+  max-width: 700px;
+  width: 100%;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.feedback_opt label {
+  color: #adadad;
+  font-family: "Encode Sans", sans-serif;
+  font-size: .9rem;
+  font-weight: bold;
+}
+
+.feedback_opt input,
+.feedback_opt textarea {
+  color: #D0DDD7;
+  display: block;
+  width: 100%;
+  background: #161616;
+  border: 2px solid #353535;
+  line-height: 1.2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.feedback_opt input:focus,
+.feedback_opt textarea:focus {
+  outline: 0;
+  border: 2px solid #BF9930;
+}
+
+.feedback_opt textarea {
+  height: 150px;
+}
+
 @media only screen and (max-width: 999px) {
   .container {
     max-width: 550px;
