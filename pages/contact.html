@@ -6,11 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- import google fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-
-  <title>Hamptons Pizza | Home</title>
+  <title>Hamptons Pizza | Menu</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -19,15 +17,17 @@
     <div class="call_order">Call to order: <span>780-555-555</span></div>
     <div class="visit_order">Visit to order: <span>5240 199 St NW, Edmonton, AB T6M 0E4</span></div>
   </div>
-  <section class="splash"><img src="/images/pizzasplash.jpg" alt="Pizza on a wood slab with fire in the background">
+  <section class="half_splash"><img src="/images/menu-splash.jpg"
+      alt="Pizza on a wood slab with fire in the background">
     <header class="header">
+
       <div class="phone_btn">
         <a href="tel:7805555555"><img src="/images/phone.png"
             alt="Image of a phone, to be clicked to make call the restaurant">
         </a>
       </div>
 
-      <a href="#" class="logo"><img src="/images/logo.png"
+      <a href="../index.html" class="logo"><img src="/images/logo.png"
           alt="Hamptons Pizza's Logo, shaped like a pizza slice, Hamptons Pizza on the crust, and HP in the middle">
       </a>
       <nav>
@@ -41,126 +41,55 @@
           </div>
 
           <div class="mobile_nav">
-            <a href="/index.html" class="logo"><img src="/images/logo.png"
+            <a href="../index.html" class="logo"><img src="/images/logo.png"
                 alt="Hamptons Pizza's Logo, shaped like a pizza slice, Hamptons Pizza on the crust, and HP in the middle">
             </a>
-            <span><a href="#" id="current">Home</a></span>
-            <span><a href="/pages/menu.html">Menu</a></span>
-            <span><a href="/pages/about.html">About Us</a></span>
-            <span><a href="/pages/contact.html">Contact Us</a></span>
+            <span><a href="../index.html">Home</a></span>
+            <span><a href="#">Menu</a></span>
+            <span><a href="#">About Us</a></span>
+            <span><a href="#" id="current">Contact Us</a></span>
           </div>
         </div>
         <div class="full_nav">
-          <span><a href="#" id="current1">Home</a></span>
-          <span><a href="/pages/menu.html">Menu</a></span>
-          <span><a href="/pages/about.html">About Us</a></span>
-          <span><a href="/pages/contact.html">Contact Us</a></span>
+          <span><a href="../index.html">Home</a></span>
+          <span><a href="./menu.html">Menu</a></span>
+          <span><a href="./about.html">About Us</a></span>
+          <span><a href="#" id="current1">Contact Us</a></span>
         </div>
       </nav>
     </header>
-
     <div class="splash_text">
-      <h1>"Best Pizza In Town"</h1>
+      <h1>Contact Us</h1>
       <p>Rated #1 on YELP! in Edmonton!</p>
     </div>
   </section>
+
   <main>
     <div class="container">
-      <section class="boxes">
-        <hr>
-        <article class="offer">
-          <h2>What We Offer</h2>
-          <div class="caro_box">
-            <div class="empty_space"></div>
-            <input type="radio" name="offer_caro" id="locally_sourced" checked>
-            <label for="locally_sourced"></label>
-            <input type="radio" name="offer_caro" id="gluten_free">
-            <label for="gluten_free"></label>
-            <input type="radio" name="offer_caro" id="res_special">
-            <label for="res_special"></label>
-
-            <div class="caro_item" id="offer_item1">
-              <h3>Locally Sourced Ingredients</h3>
-              <img src="/images/local.jpg" alt="Picture of vegtables in blue baskets">
-              <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus exercitationem
-                obcaecati quos velit corrupti soluta.</p>
-            </div>
-            <div class="caro_item" id="offer_item2">
-              <h3>Gluten Free Crust</h3>
-              <img src="/images/gluten-free.jpg" alt="Picture of vegtables in blue baskets">
-              <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus exercitationem
-                obcaecati quos velit corrupti soluta.</p>
-            </div>
-            <div class="caro_item" id="offer_item3">
-              <h3>Reservation Specials</h3>
-              <img src="/images/reservation-specials.jpg" alt="Picture of vegtables in blue baskets">
-              <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus exercitationem
-                obcaecati quos velit corrupti soluta.</p>
-            </div>
-          </div>
-        </article>
-        <hr>
-        <article class="featured">
-          <h2>Featured Items</h2>
-          <div class="caro_box">
-            <div class="empty_space"></div>
-            <input type="radio" name="feat_caro" id="feat_pizza" checked>
-            <label for="feat_pizza"></label>
-            <input type="radio" name="feat_caro" id="feat_pasta">
-            <label for="feat_pasta"></label>
-            <input type="radio" name="feat_caro" id="feat_app">
-            <label for="feat_app"></label>
-
-            <div class="caro_item" id="feat_item1">
-              <h3>Pepperoni Pizza</h3>
-              <img src="/images/menu/pepperoni.jpg" alt="Image of a brooklyn style pepperoni pizza">
-              <div class="item_info">
-                <p class="item_size">10"</p>
-                <p class="item_size">12"</p>
-                <p class="item_size">14"</p>
-                <p class="item_price">$22.99</p>
-                <p class="item_price">$29.99</p>
-                <p class="item_price">$34.99</p>
-              </div>
-            </div>
-            <div class="caro_item" id="feat_item2">
-              <h3>Spaghetti Bolognese</h3>
-              <img src="/images/menu/bolognese.jpg" alt="Image of a plate of spaghetti bolognese">
-              <div class="item_info">
-                <p class="item_size">Small</p>
-                <p class="item_size">Medium</p>
-                <p class="item_size">Large</p>
-                <p class="item_price">$10.99</p>
-                <p class="item_price">$14.99</p>
-                <p class="item_price">$18.99</p>
-              </div>
-            </div>
-            <div class="caro_item" id="feat_item3">
-              <h3>Nachos</h3>
-              <img src="/images/menu/nachos.jpg" alt="Image of a pan of cheesy nachos">
-              <div class="item_info">
-                <p class="item_size">Single</p>
-                <p class="item_size">Double</p>
-                <p class="item_size">Family</p>
-                <p class="item_price">$13.99</p>
-                <p class="item_price">$18.99</p>
-                <p class="item_price">$24.99</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <hr>
-        <article class="map_embed">
-          <h2>Our Location</h2>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2240.641454911408!2d-113.66716935039834!3d53.488529347607596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x539f8abb417fd27f%3A0xd4142ea2a1df4f47!2sPizza%2073!5e0!3m2!1sen!2sca!4v1614740509537!5m2!1sen!2sca"
-            allowfullscreen="" loading="lazy"></iframe>
-        </article>
-      </section>
       <hr>
+      <section class="contact_opt">
+
+        <h2>Ordering</h2>
+        <article class="order_opt">
+          <div class="phone_opt">
+            <h4>Call</h4>
+            <p>780-555-5555</p>
+          </div>
+          <div class="visit_opt">
+            <h4>Visit</h4>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2240.641454911408!2d-113.66716935039834!3d53.488529347607596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x539f8abb417fd27f%3A0xd4142ea2a1df4f47!2sPizza%2073!5e0!3m2!1sen!2sca!4v1614740509537!5m2!1sen!2sca"
+              allowfullscreen="" loading="lazy"></iframe>
+            <p>5240 199 St NW, Edmonton, AB T6M 0E4</p>
+          </div>
+
+        </article>
+        <hr>
+        <section class="feedback_opt">
+          <h2>Feedback</h2>
+        </section>
+      </section>
     </div>
-
-
   </main>
   <footer>
     <div class="socials">
