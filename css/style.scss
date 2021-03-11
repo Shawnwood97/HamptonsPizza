@@ -3,7 +3,7 @@
 @import '_footer.scss';
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: $mainFont;
   display: grid;
 }
 
@@ -23,8 +23,7 @@ h3 {
   >img {
     width: 100%;
     height: 100vh;
-    object-fit: cover;
-    // margin-bottom: 30px;
+    @include img-cover-position;
   }
 }
 
@@ -40,6 +39,7 @@ h3 {
 
   p {
     color: $secText;
+    font-family: $secFont;
   }
 }
 
@@ -49,21 +49,20 @@ label {
   }
 }
 
-.boxes {
-  text-align: center;
+// .boxes {
+//   text-align: center;
 
-  article {
-    >img {
-      width: 100%;
-      padding: 15px 0;
-    }
+//   // article {
+//   //   // >img {
+//   //   //   // @include full-size;
+//   //   //   // padding: 15px 0;
+//   //   // }
 
-    >h2 {
-      @include section-header;
-      // margin: 20px 0;
-    }
-  }
-}
+//   //   // >h2 {
+//   //   //   @include section-header;
+//   //   // }
+//   // }
+// }
 
 .caro_box {
   position: relative;
@@ -73,7 +72,6 @@ label {
     content: '';
     margin: 0 20px;
     margin-top: 30px;
-    position: relative;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 14px solid $secText;
@@ -100,7 +98,7 @@ label {
     >img {
       width: 100%;
       height: 200px;
-      object-fit: cover;
+      @include img-cover-position;
     }
   }
 }
@@ -127,10 +125,11 @@ label {
 
   opacity: 0;
 
-  >img {
-    width: 100%;
-    object-fit: cover;
-  }
+  // >img {
+  //   // width: 100%;
+  //   @include full-size;
+  //   @include img-cover-position;
+  // }
 }
 
 #locally_sourced:checked~#offer_item1,
@@ -167,8 +166,7 @@ label {
     opacity: .4;
     width: 100%;
     height: 50vh;
-    object-fit: cover;
-    // margin-bottom: 30px;
+    @include img-cover-position;
   }
 }
 
@@ -179,19 +177,8 @@ label {
 
   h2 {
     @include section-header;
-    // margin: 20px 0 15px 0;
   }
 
-  p {
-    // text-align: left;
-    color: $secText;
-    font-family: 'Encode Sans', sans-serif;
-    font-size: .9rem;
-    line-height: 1.4rem;
-    // margin: 0 10px;
-    padding-bottom: 10px;
-    // text-indent: 1.7rem;
-  }
 }
 
 hr {
@@ -204,7 +191,7 @@ hr {
 
 .food_menu {
   text-align: center;
-  width: 100%;
+  // @include full-size;
   overflow: hidden;
   position: relative;
   // padding-top: 30px;
@@ -215,6 +202,7 @@ hr {
     &:checked+label {
       border-bottom: 2px solid $mainText;
     }
+
   }
 
   >label {
@@ -230,7 +218,7 @@ hr {
     transition: .5s;
     position: absolute;
     top: 20px;
-    width: 100%;
+    // width: 100%;
     // margin-top: 30px;
 
     >h2 {
@@ -241,6 +229,7 @@ hr {
   >article:nth-child(even) {
     transform: translateX(-101%);
   }
+
 }
 
 #pizza:checked~#pizza_menu,
@@ -262,13 +251,11 @@ hr {
   column-gap: 5px;
 
   >div {
-    width: 100%;
 
     >img {
       width: 100%;
       height: 200px;
-      object-fit: cover;
-
+      @include img-cover-position;
     }
   }
 }
@@ -316,6 +303,31 @@ hr {
   @include item-info;
 }
 
+// About Page Styling
+
+.about_us {
+  p {
+    text-align: left;
+    color: $secText;
+    font-family: $secFont;
+    font-size: .9rem;
+    line-height: 1.4rem;
+    padding-bottom: 10px;
+  }
+
+  h2 {
+    margin-bottom: 22px;
+  }
+}
+
+.video_container {
+  iframe {
+
+    width: 100%;
+    height: 300px;
+  }
+}
+
 .people {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
@@ -326,10 +338,14 @@ hr {
     width: 100%;
   }
 
+  h3 {
+    margin: 5px 0 2px;
+  }
+
   h4 {
     color: $mainText;
-    font-family: 'Encode Sans', sans-serif;
-    font-size: .95rem;
+    font-family: $secFont;
+    font-size: .9rem;
   }
 }
 
@@ -363,16 +379,12 @@ hr {
   }
 
   .gallery_image {
-    width: 100%;
-    height: 100%;
     position: relative;
     overflow: hidden;
 
     img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 50% 50%;
+      @include full-size;
+      @include img-cover-position;
       transition: .5s ease-in-out;
 
       &:hover {
@@ -383,10 +395,6 @@ hr {
 }
 
 @media only screen and (min-width: 1000px) {
-
-  // hr {
-  //   margin-top: 20px;
-  // }
 
   .sticky_header {
     background: $altText;
@@ -444,12 +452,19 @@ hr {
       position: relative;
       top: 0;
       left: 0;
-
       opacity: 1;
     }
 
     >label {
       display: none;
+    }
+  }
+
+  .video_container {
+    iframe {
+
+      width: 80%;
+      height: 400px;
     }
   }
 

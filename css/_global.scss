@@ -2,6 +2,11 @@ $mainText: #BF9930;
 $secText: #D0DDD7;
 $altText: #161616;
 
+$mainFont: 'Roboto',
+sans-serif;
+$secFont: 'Encode Sans',
+sans-serif;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,12 +20,10 @@ body {
 @mixin section-header {
   display: inline-block;
   color: $secText;
-  // border-bottom: 2px solid $mainText;
   margin-bottom: 30px;
 }
 
 @mixin item-info {
-  // margin-bottom: 10px;
   padding: 5px;
 
   .item_size {
@@ -30,4 +33,14 @@ body {
   .item_price {
     color: $mainText
   }
+}
+
+@mixin full-size {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin img-cover-position {
+  object-fit: cover;
+  object-position: 50% 50%;
 }

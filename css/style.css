@@ -211,7 +211,7 @@ footer > span {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   display: -ms-grid;
   display: grid;
 }
@@ -236,6 +236,8 @@ h3 {
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 
 .splash_text {
@@ -251,25 +253,11 @@ h3 {
 
 .splash_text p {
   color: #D0DDD7;
+  font-family: "Encode Sans", sans-serif;
 }
 
 label:hover {
   cursor: pointer;
-}
-
-.boxes {
-  text-align: center;
-}
-
-.boxes article > img {
-  width: 100%;
-  padding: 15px 0;
-}
-
-.boxes article > h2 {
-  display: inline-block;
-  color: #D0DDD7;
-  margin-bottom: 30px;
 }
 
 .caro_box {
@@ -281,7 +269,6 @@ label:hover {
   content: '';
   margin: 0 20px;
   margin-top: 30px;
-  position: relative;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-bottom: 14px solid #D0DDD7;
@@ -308,6 +295,8 @@ label:hover {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 
 .empty_space {
@@ -326,12 +315,6 @@ label:hover {
   top: 0;
   left: 0;
   opacity: 0;
-}
-
-.caro_item > img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 #locally_sourced:checked ~ #offer_item1,
@@ -371,6 +354,8 @@ label:hover {
   height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 
 .container {
@@ -385,14 +370,6 @@ label:hover {
   margin-bottom: 30px;
 }
 
-.container p {
-  color: #D0DDD7;
-  font-family: 'Encode Sans', sans-serif;
-  font-size: .9rem;
-  line-height: 1.4rem;
-  padding-bottom: 10px;
-}
-
 hr {
   border-color: #BF9930;
   width: 50%;
@@ -403,7 +380,6 @@ hr {
 
 .food_menu {
   text-align: center;
-  width: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -431,7 +407,6 @@ hr {
   transition: .5s;
   position: absolute;
   top: 20px;
-  width: 100%;
 }
 
 .food_menu > article > h2 {
@@ -468,15 +443,13 @@ hr {
           column-gap: 5px;
 }
 
-.menu_box > div {
-  width: 100%;
-}
-
 .menu_box > div > img {
   width: 100%;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 
 .menu_item hr {
@@ -547,6 +520,24 @@ hr {
   color: #BF9930;
 }
 
+.about_us p {
+  text-align: left;
+  color: #D0DDD7;
+  font-family: "Encode Sans", sans-serif;
+  font-size: .9rem;
+  line-height: 1.4rem;
+  padding-bottom: 10px;
+}
+
+.about_us h2 {
+  margin-bottom: 22px;
+}
+
+.video_container iframe {
+  width: 100%;
+  height: 300px;
+}
+
 .people {
   display: -ms-grid;
   display: grid;
@@ -561,10 +552,14 @@ hr {
   width: 100%;
 }
 
+.people h3 {
+  margin: 5px 0 2px;
+}
+
 .people h4 {
   color: #BF9930;
-  font-family: 'Encode Sans', sans-serif;
-  font-size: .95rem;
+  font-family: "Encode Sans", sans-serif;
+  font-size: .9rem;
 }
 
 .gallery_container {
@@ -599,8 +594,6 @@ hr {
 }
 
 .gallery_container .gallery_image {
-  width: 100%;
-  height: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -683,6 +676,10 @@ hr {
   }
   .caro_box > label {
     display: none;
+  }
+  .video_container iframe {
+    width: 80%;
+    height: 400px;
   }
   .gallery_container {
     -ms-grid-columns: (1fr)[6];
