@@ -7,6 +7,11 @@ body {
   display: grid;
 }
 
+h3 {
+  color: $secText;
+  margin-bottom: 10px;
+}
+
 .sticky_header {
   display: none;
 }
@@ -19,7 +24,7 @@ body {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
   }
 }
 
@@ -55,7 +60,7 @@ label {
 
     >h2 {
       @include section-header;
-      margin: 20px 0;
+      // margin: 20px 0;
     }
   }
 }
@@ -66,7 +71,8 @@ label {
   >label {
     display: inline-block;
     content: '';
-    margin: 20px;
+    margin: 0 20px;
+    margin-top: 30px;
     position: relative;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
@@ -84,11 +90,6 @@ label {
 
   >div {
 
-    >h3 {
-      color: $secText;
-      margin-bottom: 10px;
-    }
-
     >p {
       color: $secText;
       padding: 0 5px;
@@ -105,14 +106,21 @@ label {
 }
 
 .empty_space {
-  height: 280px;
+  height: 276px;
   width: 100%;
-  margin-bottom: 0;
+  // margin-bottom: 0;
+}
+
+.featured {
+  .empty_space {
+    height: 290px;
+    width: 100%;
+    // margin-bottom: 0;
+  }
 }
 
 .caro_item {
   width: 100%;
-  height: 300px;
   position: absolute;
   top: 0;
   left: 0;
@@ -136,7 +144,7 @@ label {
 
 .map_embed {
   text-align: center;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
 
   >h2 {
     @include section-header;
@@ -149,18 +157,6 @@ label {
   }
 }
 
-// .carousel {
-//   width: 100%;
-
-//   >input {
-//     display: none;
-//   }
-
-//   >img {
-//     width: 100%;
-//   }
-// }
-
 // Menu Page Styling
 
 .half_splash {
@@ -172,19 +168,38 @@ label {
     width: 100%;
     height: 50vh;
     object-fit: cover;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
   }
 }
 
 .container {
   max-width: 1000px;
   margin: auto;
+  text-align: center;
+
+  h2 {
+    @include section-header;
+    // margin: 20px 0 15px 0;
+  }
+
+  p {
+    // text-align: left;
+    color: $secText;
+    font-family: 'Encode Sans', sans-serif;
+    font-size: .9rem;
+    line-height: 1.4rem;
+    // margin: 0 10px;
+    padding-bottom: 10px;
+    // text-indent: 1.7rem;
+  }
 }
 
 hr {
   border-color: $mainText;
   width: 50%;
   margin-left: 25%;
+  margin-top: 30px;
+  margin-bottom: 26px;
 }
 
 .food_menu {
@@ -192,7 +207,7 @@ hr {
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding-top: 30px;
+  // padding-top: 30px;
 
   >input[type="radio"] {
     display: none;
@@ -206,6 +221,7 @@ hr {
     color: $secText;
     font-weight: bold;
     padding: 10px 10px 3px 10px;
+    margin-bottom: 10px;
   }
 
   >article {
@@ -213,9 +229,9 @@ hr {
     transform: translateX(101%);
     transition: .5s;
     position: absolute;
-    top: 50px;
+    top: 20px;
     width: 100%;
-    margin-top: 30px;
+    // margin-top: 30px;
 
     >h2 {
       @include section-header;
@@ -240,15 +256,6 @@ hr {
   top: 0;
 }
 
-// input[type="radio"] {
-//   display: none;
-
-//   &:checked+label {
-//     border-bottom: 2px solid $mainText;
-//   }
-// }
-
-
 .menu_box {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -256,7 +263,6 @@ hr {
 
   >div {
     width: 100%;
-    // margin-bottom: 20px;
 
     >img {
       width: 100%;
@@ -267,10 +273,16 @@ hr {
   }
 }
 
-.item_name {
-  color: $secText;
-  padding: 15px 0;
-  font-weight: bold;
+.menu_item {
+  hr {
+    margin-bottom: 10px;
+  }
+
+  .item_name {
+    color: $secText;
+    padding: 20px 0 15px 0;
+    font-weight: bold;
+  }
 }
 
 .menu_price {
@@ -282,7 +294,16 @@ hr {
   grid-template-columns: 1fr 1fr 1fr;
 
   @include item-info;
+
+  .item_size {
+    padding: 0;
+  }
+
+  .item_price {
+    padding: 0px;
+  }
 }
+
 
 .item_info_double {
   display: grid;
@@ -295,7 +316,78 @@ hr {
   @include item-info;
 }
 
+.people {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  column-gap: 10px;
+  row-gap: 20px;
+
+  img {
+    width: 100%;
+  }
+
+  h4 {
+    color: $mainText;
+    font-family: 'Encode Sans', sans-serif;
+    font-size: .95rem;
+  }
+}
+
+
+.gallery_container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: 300px 100px;
+  gap: 10px;
+  grid-auto-flow: dense;
+
+  .span_w1,
+  .span_w2,
+  .span_w3,
+  .span_w4,
+  .span_w5,
+  .span_w6 {
+    grid-column: span 1;
+  }
+
+  .span_h1 {
+    grid-row: span 1;
+  }
+
+  .span_h2 {
+    grid-row: span 2;
+  }
+
+  .span_h3 {
+    grid-row: span 3;
+  }
+
+  .gallery_image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      transition: .5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 1000px) {
+
+  // hr {
+  //   margin-top: 20px;
+  // }
+
   .sticky_header {
     background: $altText;
     position: fixed;
@@ -348,7 +440,7 @@ hr {
 
     >.caro_item {
       width: 100%;
-      height: 325px;
+      height: 300px;
       position: relative;
       top: 0;
       left: 0;
@@ -360,17 +452,59 @@ hr {
       display: none;
     }
   }
+
+  .gallery_container {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 300px 100px;
+
+    .span_w1 {
+      grid-column: span 1;
+    }
+
+    .span_w2 {
+      grid-column: span 2;
+    }
+
+    .span_w3 {
+      grid-column: span 3;
+    }
+
+    .span_w4 {
+      grid-column: span 4;
+    }
+
+    .span_w5 {
+      grid-column: span 5;
+    }
+
+    .span_w6 {
+      grid-column: span 6;
+    }
+
+    .span_h1 {
+      grid-row: span 1;
+    }
+
+    .span_h2 {
+      grid-row: span 2;
+    }
+
+    .span_h3 {
+      grid-row: span 3;
+    }
+  }
 }
+
+
 
 .featured {
   .caro_box {
 
     >.caro_item {
-      height: 315px;
+      height: 282px;
     }
   }
 }
-
 
 @media only screen and (max-width: 1000px) {
   .container {

@@ -3,8 +3,33 @@ footer {
   place-items: center;
   margin: 30px 0;
 
-  .socials>a>img {
+  .socials>a {
     padding: 10px;
+    text-decoration: none;
+
+    &:hover {
+      .svg_bg {
+        fill: $mainText;
+      }
+
+      .svg_logo {
+        fill: $altText;
+      }
+    }
+
+    >svg {
+      // padding: 10px;
+      height: 36px;
+    }
+  }
+
+  .svg_bg {
+    fill: $altText;
+  }
+
+  .svg_logo {
+    fill: $mainText;
+
   }
 
   >span {

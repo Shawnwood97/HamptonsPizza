@@ -180,8 +180,29 @@ footer {
   margin: 30px 0;
 }
 
-footer .socials > a > img {
+footer .socials > a {
   padding: 10px;
+  text-decoration: none;
+}
+
+footer .socials > a:hover .svg_bg {
+  fill: #BF9930;
+}
+
+footer .socials > a:hover .svg_logo {
+  fill: #161616;
+}
+
+footer .socials > a > svg {
+  height: 36px;
+}
+
+footer .svg_bg {
+  fill: #161616;
+}
+
+footer .svg_logo {
+  fill: #BF9930;
 }
 
 footer > span {
@@ -193,6 +214,11 @@ body {
   font-family: 'Roboto', sans-serif;
   display: -ms-grid;
   display: grid;
+}
+
+h3 {
+  color: #D0DDD7;
+  margin-bottom: 10px;
 }
 
 .sticky_header {
@@ -210,7 +236,6 @@ body {
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-bottom: 30px;
 }
 
 .splash_text {
@@ -244,8 +269,7 @@ label:hover {
 .boxes article > h2 {
   display: inline-block;
   color: #D0DDD7;
-  margin-top: 10px;
-  margin: 20px 0;
+  margin-bottom: 30px;
 }
 
 .caro_box {
@@ -255,7 +279,8 @@ label:hover {
 .caro_box > label {
   display: inline-block;
   content: '';
-  margin: 20px;
+  margin: 0 20px;
+  margin-top: 30px;
   position: relative;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
@@ -269,11 +294,6 @@ label:hover {
 
 .caro_box > input:checked + label {
   border-bottom: 14px solid #BF9930;
-}
-
-.caro_box > div > h3 {
-  color: #D0DDD7;
-  margin-bottom: 10px;
 }
 
 .caro_box > div > p {
@@ -291,14 +311,17 @@ label:hover {
 }
 
 .empty_space {
-  height: 280px;
+  height: 276px;
   width: 100%;
-  margin-bottom: 0;
+}
+
+.featured .empty_space {
+  height: 290px;
+  width: 100%;
 }
 
 .caro_item {
   width: 100%;
-  height: 300px;
   position: absolute;
   top: 0;
   left: 0;
@@ -322,13 +345,12 @@ label:hover {
 
 .map_embed {
   text-align: center;
-  margin-bottom: 30px;
 }
 
 .map_embed > h2 {
   display: inline-block;
   color: #D0DDD7;
-  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .map_embed iframe {
@@ -349,18 +371,34 @@ label:hover {
   height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-bottom: 30px;
 }
 
 .container {
   max-width: 1000px;
   margin: auto;
+  text-align: center;
+}
+
+.container h2 {
+  display: inline-block;
+  color: #D0DDD7;
+  margin-bottom: 30px;
+}
+
+.container p {
+  color: #D0DDD7;
+  font-family: 'Encode Sans', sans-serif;
+  font-size: .9rem;
+  line-height: 1.4rem;
+  padding-bottom: 10px;
 }
 
 hr {
   border-color: #BF9930;
   width: 50%;
   margin-left: 25%;
+  margin-top: 30px;
+  margin-bottom: 26px;
 }
 
 .food_menu {
@@ -368,7 +406,6 @@ hr {
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding-top: 30px;
 }
 
 .food_menu > input[type="radio"] {
@@ -383,6 +420,7 @@ hr {
   color: #D0DDD7;
   font-weight: bold;
   padding: 10px 10px 3px 10px;
+  margin-bottom: 10px;
 }
 
 .food_menu > article {
@@ -392,15 +430,14 @@ hr {
   -webkit-transition: .5s;
   transition: .5s;
   position: absolute;
-  top: 50px;
+  top: 20px;
   width: 100%;
-  margin-top: 30px;
 }
 
 .food_menu > article > h2 {
   display: inline-block;
   color: #D0DDD7;
-  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .food_menu > article:nth-child(even) {
@@ -442,9 +479,13 @@ hr {
      object-fit: cover;
 }
 
-.item_name {
+.menu_item hr {
+  margin-bottom: 10px;
+}
+
+.menu_item .item_name {
   color: #D0DDD7;
-  padding: 15px 0;
+  padding: 20px 0 15px 0;
   font-weight: bold;
 }
 
@@ -457,7 +498,6 @@ hr {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 15px;
   padding: 5px;
 }
 
@@ -469,12 +509,19 @@ hr {
   color: #BF9930;
 }
 
+.item_info .item_size {
+  padding: 0;
+}
+
+.item_info .item_price {
+  padding: 0px;
+}
+
 .item_info_double {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  margin-bottom: 15px;
   padding: 5px;
 }
 
@@ -489,7 +536,6 @@ hr {
 .item_info_single {
   display: -ms-grid;
   display: grid;
-  margin-bottom: 15px;
   padding: 5px;
 }
 
@@ -499,6 +545,80 @@ hr {
 
 .item_info_single .item_price {
   color: #BF9930;
+}
+
+.people {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(275px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 20px;
+}
+
+.people img {
+  width: 100%;
+}
+
+.people h4 {
+  color: #BF9930;
+  font-family: 'Encode Sans', sans-serif;
+  font-size: .95rem;
+}
+
+.gallery_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: 300px 100px;
+  gap: 10px;
+  grid-auto-flow: dense;
+}
+
+.gallery_container .span_w1,
+.gallery_container .span_w2,
+.gallery_container .span_w3,
+.gallery_container .span_w4,
+.gallery_container .span_w5,
+.gallery_container .span_w6 {
+  grid-column: span 1;
+}
+
+.gallery_container .span_h1 {
+  grid-row: span 1;
+}
+
+.gallery_container .span_h2 {
+  grid-row: span 2;
+}
+
+.gallery_container .span_h3 {
+  grid-row: span 3;
+}
+
+.gallery_container .gallery_image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery_container .gallery_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.gallery_container .gallery_image img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 @media only screen and (min-width: 1000px) {
@@ -555,7 +675,7 @@ hr {
   }
   .caro_box > .caro_item {
     width: 100%;
-    height: 325px;
+    height: 300px;
     position: relative;
     top: 0;
     left: 0;
@@ -564,10 +684,43 @@ hr {
   .caro_box > label {
     display: none;
   }
+  .gallery_container {
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+    -ms-grid-rows: 300px 100px;
+        grid-template-rows: 300px 100px;
+  }
+  .gallery_container .span_w1 {
+    grid-column: span 1;
+  }
+  .gallery_container .span_w2 {
+    grid-column: span 2;
+  }
+  .gallery_container .span_w3 {
+    grid-column: span 3;
+  }
+  .gallery_container .span_w4 {
+    grid-column: span 4;
+  }
+  .gallery_container .span_w5 {
+    grid-column: span 5;
+  }
+  .gallery_container .span_w6 {
+    grid-column: span 6;
+  }
+  .gallery_container .span_h1 {
+    grid-row: span 1;
+  }
+  .gallery_container .span_h2 {
+    grid-row: span 2;
+  }
+  .gallery_container .span_h3 {
+    grid-row: span 3;
+  }
 }
 
 .featured .caro_box > .caro_item {
-  height: 315px;
+  height: 282px;
 }
 
 @media only screen and (max-width: 1000px) {
