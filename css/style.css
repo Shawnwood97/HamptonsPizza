@@ -362,7 +362,7 @@ label:hover {
 
 .caro_box .caro_item > img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 50%;
@@ -370,12 +370,12 @@ label:hover {
 }
 
 .empty_space {
-  height: 276px;
+  height: 325px;
   width: 100%;
 }
 
 .featured .empty_space {
-  height: 290px;
+  height: 340px;
   width: 100%;
 }
 
@@ -401,7 +401,7 @@ label:hover {
 .map_embed iframe {
   width: 100%;
   border: 0;
-  height: 250px;
+  height: 350px;
 }
 
 .half_splash {
@@ -873,7 +873,7 @@ hr:last-child {
   }
   .caro_box > .caro_item {
     width: 100%;
-    height: 300px;
+    height: 340px;
     position: relative;
     top: 0;
     left: 0;
