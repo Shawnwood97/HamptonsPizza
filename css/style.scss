@@ -8,13 +8,13 @@ body {
 }
 
 h3 {
-  color: $secText;
+  color: $secColor;
   margin-bottom: 10px;
 }
 
 .pizza {
   height: 20px;
-  fill: $mainText;
+  fill: $mainColor;
   padding-bottom: 5px;
 }
 
@@ -42,12 +42,12 @@ h3 {
 
   h1 {
     font-size: 34px;
-    color: $mainText;
+    color: $mainColor;
     text-shadow: 2px 2px 6px #000;
   }
 
   p {
-    color: $secText;
+    color: $secColor;
     font-family: $secFont;
     text-shadow: 2px 2px 6px #000;
   }
@@ -65,8 +65,8 @@ h3 {
 
   .cta_button {
     background: transparent;
-    border: 2px solid $mainText;
-    color: $secText;
+    border: 2px solid $mainColor;
+    color: $secColor;
     padding: 10px 20px;
     font-weight: bold;
     width: 100%;
@@ -75,8 +75,8 @@ h3 {
     cursor: pointer;
 
     &:hover {
-      background: $mainText;
-      color: $altText;
+      background: $mainColor;
+      color: $altColor;
       text-shadow: none;
       box-shadow: none;
     }
@@ -109,7 +109,7 @@ label {
     margin-top: 30px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 14px solid $secText;
+    border-bottom: 14px solid $secColor;
     z-index: 9999;
   }
 
@@ -117,7 +117,7 @@ label {
     display: none;
 
     &:checked+label {
-      border-bottom: 14px solid $mainText;
+      border-bottom: 14px solid $mainColor;
     }
   }
 
@@ -129,11 +129,9 @@ label {
     opacity: 0;
 
     >p {
-      color: $secText;
+      color: $secColor;
       font-family: $secFont;
       padding: 7px 0 0 5px;
-      // padding-top: 0;
-      // font-weight: bold;
     }
 
     >img {
@@ -209,7 +207,7 @@ label {
 }
 
 hr {
-  border-color: $mainText;
+  border-color: $mainColor;
   width: 50%;
   margin-left: 25%;
   margin-top: 30px;
@@ -229,13 +227,13 @@ hr {
     display: none;
 
     &:checked+label {
-      border-bottom: 2px solid $mainText;
+      border-bottom: 2px solid $mainColor;
     }
 
   }
 
   >label {
-    color: $secText;
+    color: $secColor;
     font-weight: bold;
     padding: 10px 10px 3px 10px;
     margin-bottom: 10px;
@@ -292,14 +290,14 @@ hr {
   }
 
   .item_name {
-    color: $secText;
+    color: $secColor;
     padding: 20px 0 15px 0;
     font-weight: bold;
   }
 }
 
 .menu_price {
-  color: $mainText;
+  color: $mainColor;
 }
 
 .item_info {
@@ -336,7 +334,7 @@ hr {
 .about_us {
   p {
     text-align: center;
-    color: $secText;
+    color: $secColor;
     font-family: $secFont;
     font-size: .9rem;
     line-height: 1.4rem;
@@ -370,7 +368,7 @@ hr {
   }
 
   h4 {
-    color: $mainText;
+    color: $mainColor;
     font-family: $secFont;
     font-size: .9rem;
   }
@@ -432,7 +430,7 @@ hr {
 .phone_opt {
 
   p {
-    color: $secText;
+    color: $secColor;
     margin-top: 10px;
     padding: 0 5px;
     font-size: 2.5rem;
@@ -452,7 +450,7 @@ hr {
     }
 
     p {
-      color: $secText;
+      color: $secColor;
       margin-top: 10px;
       margin-bottom: 30px;
       padding: 0 5px;
@@ -483,10 +481,10 @@ hr {
 
     input,
     textarea {
-      color: $secText;
+      color: $secColor;
       display: block;
       width: 100%;
-      background: $altText;
+      background: $altColor;
       border: 2px solid #353535;
       line-height: 1.2rem;
       font-size: 1.2rem;
@@ -497,7 +495,7 @@ hr {
 
       &:focus {
         outline: 0;
-        border: 2px solid $mainText;
+        border: 2px solid $mainColor;
         box-shadow: none;
       }
     }
@@ -514,7 +512,7 @@ hr {
 
       #reset_btn {
         place-self: start;
-        color: $secText;
+        color: $secColor;
         margin-left: 5px;
       }
     }
@@ -522,7 +520,7 @@ hr {
     #submit_btn,
     #reset_btn {
       width: 120px;
-      color: $mainText;
+      color: $mainColor;
       font-size: 1rem;
 
       &:hover {
@@ -547,7 +545,7 @@ hr {
 @media only screen and (min-width: 1000px) {
 
   .sticky_header {
-    background: $altText;
+    background: $altColor;
     position: fixed;
     top: 0;
     left: 0;
@@ -556,12 +554,12 @@ hr {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    color: $secText;
+    color: $secColor;
     font-size: .8rem;
     z-index: 99999;
 
     span {
-      color: $mainText;
+      color: $mainColor;
     }
 
     .call_order {

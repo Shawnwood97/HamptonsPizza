@@ -1,6 +1,6 @@
-$mainText: #BF9930;
-$secText: #D0DDD7;
-$altText: #161616;
+$mainColor: #BF9930;
+$secColor: #D0DDD7;
+$altColor: #161616;
 
 $mainFont: 'Roboto',
 sans-serif;
@@ -19,7 +19,7 @@ body {
 
 @mixin section-header {
   display: inline-block;
-  color: $secText;
+  color: $secColor;
   margin-bottom: 30px;
 }
 
@@ -32,11 +32,11 @@ body {
   padding: 5px;
 
   .item_size {
-    color: $secText;
+    color: $secColor;
   }
 
   .item_price {
-    color: $mainText
+    color: $mainColor
   }
 }
 

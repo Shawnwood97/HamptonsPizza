@@ -9,11 +9,11 @@ footer {
 
     &:hover {
       .svg_bg {
-        fill: $mainText;
+        fill: $mainColor;
       }
 
       .svg_logo {
-        fill: $altText;
+        fill: $altColor;
       }
     }
 
@@ -24,16 +24,16 @@ footer {
   }
 
   .svg_bg {
-    fill: $altText;
+    fill: $altColor;
   }
 
   .svg_logo {
-    fill: $mainText;
+    fill: $mainColor;
 
   }
 
   >span {
-    color: $secText;
+    color: $secColor;
     font-size: .8rem;
     padding-top: 10px;
   }

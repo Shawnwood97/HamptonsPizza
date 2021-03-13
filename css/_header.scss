@@ -104,7 +104,7 @@ header {
     }
 
     #current {
-      border-bottom: 3px solid $mainText;
+      border-bottom: 3px solid $mainColor;
     }
 
     a {
@@ -113,7 +113,7 @@ header {
       color: #fff;
 
       &:hover {
-        color: $mainText;
+        color: $mainColor;
       }
     }
   }
@@ -144,19 +144,19 @@ header {
       justify-items: center;
 
       a {
-        color: $secText;
+        color: $secColor;
         font-weight: 800;
         text-decoration: none;
         text-shadow: 2px 2px 5px #000;
         // padding-bottom: 8px;
 
         &:hover {
-          color: $mainText;
+          color: $mainColor;
         }
       }
 
       #current1 {
-        border-bottom: 3px solid $mainText;
+        border-bottom: 3px solid $mainColor;
       }
     }
   }
