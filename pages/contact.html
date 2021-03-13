@@ -14,7 +14,7 @@
 
 <body>
   <div class="sticky_header">
-    <div class="call_order">Call to order: <span>780-555-555</span></div>
+    <div class="call_order">Call to order: <span>780-555-5555</span></div>
     <div class="visit_order">Visit to order: <span>5240 199 St NW, Edmonton, AB T6M 0E4</span></div>
   </div>
   <section class="half_splash"><img src="/images/contact-splash.jpg"
@@ -27,7 +27,7 @@
         </a>
       </div>
 
-      <a href="../index.html" class="logo"><img src="/images/logo.png"
+      <a href="/index.html" class="logo"><img src="/images/logo.png"
           alt="Hamptons Pizza's Logo, shaped like a pizza slice, Hamptons Pizza on the crust, and HP in the middle">
       </a>
       <nav>
@@ -41,26 +41,32 @@
           </div>
 
           <div class="mobile_nav">
-            <a href="../index.html" class="logo"><img src="/images/logo.png"
+            <a href="/index.html" class="logo"><img src="/images/logo.png"
                 alt="Hamptons Pizza's Logo, shaped like a pizza slice, Hamptons Pizza on the crust, and HP in the middle">
             </a>
-            <span><a href="../index.html">Home</a></span>
-            <span><a href="#">Menu</a></span>
-            <span><a href="#">About Us</a></span>
+            <span><a href="/index.html">Home</a></span>
+            <span><a href="/pages/menu.html">Menu</a></span>
+            <span><a href="/pages/about.html">About Us</a></span>
             <span><a href="#" id="current">Contact Us</a></span>
           </div>
         </div>
         <div class="full_nav">
-          <span><a href="../index.html">Home</a></span>
-          <span><a href="./menu.html">Menu</a></span>
-          <span><a href="./about.html">About Us</a></span>
+          <span><a href="/index.html">Home</a></span>
+          <span><a href="/pages/menu.html">Menu</a></span>
+          <span><a href="/pages/about.html">About Us</a></span>
           <span><a href="#" id="current1">Contact Us</a></span>
         </div>
       </nav>
     </header>
     <div class="splash_text">
       <h1>Contact Us</h1>
-      <p>Rated #1 on YELP! in Edmonton!</p>
+      <!-- <p>Rated #1 on YELP! in Edmonton!</p> -->
+      <div class="mob_cta_buttons_1">
+        <a href="tel:7805555555"><button class="cta_button">Call To Order</button></a>
+      </div>
+      <div class="fs_cta_buttons_1">
+        <a href="/pages/contact.html"><button class="cta_button">Call To Order</button></a>
+      </div>
     </div>
   </section>
 
@@ -69,48 +75,53 @@
       <hr>
       <section class="contact_opt">
 
-        <h2>Ordering</h2>
+        <!-- <h2>Ordering</h2> -->
         <article class="order_opt">
           <div class="phone_opt">
-            <h4>Call</h4>
+            <!-- <h3>Call</h3> -->
             <p>780-555-5555</p>
           </div>
-          <div class="visit_opt">
-            <h4>Visit</h4>
+        </article>
+        <div class="contact_grid">
+          <article class="visit_opt">
+            <h3>Visit</h3>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2240.641454911408!2d-113.66716935039834!3d53.488529347607596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x539f8abb417fd27f%3A0xd4142ea2a1df4f47!2sPizza%2073!5e0!3m2!1sen!2sca!4v1614740509537!5m2!1sen!2sca"
               allowfullscreen="" loading="lazy"></iframe>
-            <p>5240 199 St NW, Edmonton, AB T6M 0E4</p>
-          </div>
+            <!-- <p>5240 199 St NW, Edmonton, AB T6M 0E4</p> -->
+          </article>
 
-        </article>
-        <hr>
-        <h2>Feedback</h2>
-        <section class="feedback_opt">
-
-          <article class="feedback_form">
+          <article class="feedback_opt">
+            <h3>Feedback</h3>
             <form class="contact_form" action="">
 
-              <label for="full_name">Full Name</label>
-              <input type="text" id="full_name" name="email" required>
+              <!-- <label for="full_name">Full Name</label> -->
+              <input type="text" id="full_name" name="email" placeholder="Full Name" required>
 
 
-              <label for="email_address">Email Address</label>
-              <input type="email" id="email_address" name="emailaddress" required>
+              <!-- <label for="email_address">Email Address</label> -->
+              <input type="email" id="email_address" name="emailaddress" placeholder="Email Address" required>
 
-              <label for="phone_number">Phone Number</label>
-              <input type="tel" id="phone_number" name="phonenumber" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+              <!-- <label for="phone_number">Phone Number</label> -->
+              <input type="tel" id="phone_number" name="phonenumber" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                placeholder="Phone Number" required>
 
-              <label for="contact_message">Message</label>
-              <textarea type="textarea" id="contact_message" name="contactmessage" required></textarea>
+              <!-- <label for="contact_message">Message</label> -->
+              <textarea type="textarea" id="contact_message" name="contactmessage" placeholder="Message"
+                required></textarea>
+              <div class="form_btns">
+                <input type="submit" id="submit_btn">
+                <input type="reset" id="reset_btn">
+              </div>
 
             </form>
           </article>
-        </section>
-      </section>
-      <hr>
+        </div>
+        <hr>
     </div>
+    </section>
   </main>
+
   <footer>
     <div class="socials">
       <a href="https://facebook.com" target="_blank"><svg viewBox="0 0 36 36" fill="none"

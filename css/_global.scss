@@ -23,6 +23,11 @@ body {
   margin-bottom: 30px;
 }
 
+@mixin resp-grid($min) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+}
+
 @mixin item-info {
   padding: 5px;
 
