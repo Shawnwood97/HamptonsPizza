@@ -211,6 +211,10 @@ footer > span {
   padding-top: 10px;
 }
 
+.rotation_lock {
+  display: none;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   display: -ms-grid;
@@ -687,10 +691,6 @@ hr:last-child {
           transform: scale(1.2);
 }
 
-.lb_image {
-  display: none;
-}
-
 .phone_opt p {
   color: #D0DDD7;
   margin-top: 10px;
@@ -801,6 +801,10 @@ hr:last-child {
 
 .contact_grid .feedback_opt textarea {
   height: 150px;
+}
+
+.lb_image {
+  display: none;
 }
 
 @media only screen and (max-width: 999px) {
@@ -945,6 +949,20 @@ hr:last-child {
     max-width: 90%;
     max-height: 80%;
     margin-top: 5%;
+  }
+}
+
+@media only screen and (max-height: 600px) and (orientation: landscape) and (max-width: 1000px) {
+  .rotation_lock {
+    display: -ms-grid;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    place-items: center;
+    color: #BF9930;
+  }
+  .no_lock {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

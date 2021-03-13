@@ -2,6 +2,10 @@
 @import '_header.scss';
 @import '_footer.scss';
 
+.rotation_lock {
+  display: none;
+}
+
 body {
   font-family: $mainFont;
   display: grid;
@@ -421,9 +425,8 @@ hr {
   }
 }
 
-.lb_image {
-  display: none;
-}
+
+
 
 // Contact Page Styling
 
@@ -533,6 +536,10 @@ hr {
       height: 150px;
     }
   }
+}
+
+.lb_image {
+  display: none;
 }
 
 @media only screen and (max-width: 999px) {
@@ -706,5 +713,19 @@ hr {
       max-height: 80%;
       margin-top: 5%;
     }
+  }
+}
+
+@media only screen and (max-height: 600px) and (orientation: landscape) and (max-width: 1000px) {
+  .rotation_lock {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    place-items: center;
+    color: $mainColor;
+  }
+
+  .no_lock {
+    display: none;
   }
 }
