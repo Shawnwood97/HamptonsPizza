@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-body {
+html {
   background: url(/images/background.png);
 }
 
@@ -211,6 +211,50 @@ footer > span {
   padding-top: 10px;
 }
 
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
 .rotation_lock {
   display: none;
 }
@@ -219,6 +263,8 @@ body {
   font-family: "Roboto", sans-serif;
   display: -ms-grid;
   display: grid;
+  -webkit-animation: fade-in 1.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: fade-in 1.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 h3 {
@@ -229,7 +275,7 @@ h3 {
 .pizza {
   height: 20px;
   fill: #BF9930;
-  padding-bottom: 5px;
+  margin: 25px;
 }
 
 .sticky_header {
@@ -289,27 +335,41 @@ h3 {
 .mob_cta_buttons_1 .cta_button,
 .fs_cta_buttons .cta_button,
 .mob_cta_buttons .cta_button {
-  background: transparent;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, #BF9930));
+  background: linear-gradient(to right, transparent 50%, #BF9930 50%);
   border: 2px solid #BF9930;
   color: #D0DDD7;
   padding: 10px 20px;
   font-weight: bold;
   width: 100%;
+  background-size: 200% 10%;
   text-shadow: 2px 2px 4px #000;
-  -webkit-box-shadow: 1px 1px 4px #000;
-          box-shadow: 1px 1px 4px #000;
   cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .fs_cta_buttons_1 .cta_button:hover,
 .mob_cta_buttons_1 .cta_button:hover,
 .fs_cta_buttons .cta_button:hover,
 .mob_cta_buttons .cta_button:hover {
-  background: #BF9930;
+  background-position: -100% 90%;
   color: #161616;
   text-shadow: none;
+  -webkit-box-shadow: 1px 1px 4px #000;
+          box-shadow: 1px 1px 4px #000;
+}
+
+.fs_cta_buttons_1 .cta_button:active, .fs_cta_buttons_1 .cta_button:focus,
+.mob_cta_buttons_1 .cta_button:active,
+.mob_cta_buttons_1 .cta_button:focus,
+.fs_cta_buttons .cta_button:active,
+.fs_cta_buttons .cta_button:focus,
+.mob_cta_buttons .cta_button:active,
+.mob_cta_buttons .cta_button:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
+  outline: none;
 }
 
 .fs_cta_buttons_1,
@@ -597,12 +657,12 @@ hr:last-child {
 }
 
 .about_us p {
-  text-align: center;
+  text-align: left;
   color: #D0DDD7;
   font-family: "Encode Sans", sans-serif;
   font-size: .9rem;
   line-height: 1.4rem;
-  padding: 0 5px 5px 5px;
+  padding: 0 10px 5px 10px;
 }
 
 .about_us h2 {
@@ -689,6 +749,8 @@ hr:last-child {
 .gallery_container .gallery_image img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 
 .phone_opt p {
@@ -756,6 +818,7 @@ hr:last-child {
   margin-bottom: 5px;
   font-family: "Encode Sans", sans-serif;
   padding: 3px 0 3px 5px;
+  resize: none;
 }
 
 .contact_grid .feedback_opt input:focus,
@@ -774,15 +837,15 @@ hr:last-child {
   width: 100%;
 }
 
-.contact_grid .feedback_opt .form_btns #submit_btn {
-  place-self: end;
-  margin-right: 5px;
-}
-
 .contact_grid .feedback_opt .form_btns #reset_btn {
   place-self: start;
   color: #D0DDD7;
   margin-left: 5px;
+}
+
+.contact_grid .feedback_opt #submit_btn {
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
 .contact_grid .feedback_opt #submit_btn,
@@ -803,8 +866,31 @@ hr:last-child {
   height: 150px;
 }
 
+.hours {
+  margin-top: 30px;
+}
+
+.hours p {
+  color: #D0DDD7;
+  font-family: "Encode Sans", sans-serif;
+  font-style: italic;
+  line-height: 20px;
+}
+
+.hours p span {
+  font-style: normal;
+}
+
 .lb_image {
   display: none;
+  cursor: default;
+}
+
+.lb_image img {
+  border: 5px solid #D0DDD7;
+  border-radius: 5px;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
 }
 
 .no_deco {
@@ -819,6 +905,9 @@ hr:last-child {
 }
 
 @media only screen and (min-width: 1000px) {
+  hr:last-child {
+    margin-top: 35px;
+  }
   .sticky_header {
     background: #161616;
     position: fixed;
@@ -948,6 +1037,8 @@ hr:last-child {
   }
   .lb_image:target {
     display: block;
+    -webkit-animation: fade-in-fwd 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+            animation: fade-in-fwd 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
   .lb_image > img {
     max-width: 90%;

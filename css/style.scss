@@ -2,6 +2,30 @@
 @import '_header.scss';
 @import '_footer.scss';
 
+@keyframes fade-in {
+  0% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
 .rotation_lock {
   display: none;
 }
@@ -9,6 +33,7 @@
 body {
   font-family: $mainFont;
   display: grid;
+  animation: fade-in 1.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 h3 {
@@ -19,7 +44,7 @@ h3 {
 .pizza {
   height: 20px;
   fill: $mainColor;
-  padding-bottom: 5px;
+  margin: 25px;
 }
 
 .sticky_header {
@@ -68,21 +93,31 @@ h3 {
   column-gap: 20px;
 
   .cta_button {
-    background: transparent;
+    background: linear-gradient(to right, transparent 50%, $mainColor 50%);
     border: 2px solid $mainColor;
     color: $secColor;
     padding: 10px 20px;
     font-weight: bold;
     width: 100%;
+    background-size: 200% 10%;
     text-shadow: 2px 2px 4px #000;
-    box-shadow: 1px 1px 4px #000;
+
     cursor: pointer;
+    transition: all 0.5s;
+
 
     &:hover {
-      background: $mainColor;
+      // background: $mainColor;
+      background-position: -100% 90%;
       color: $altColor;
       text-shadow: none;
+      box-shadow: 1px 1px 4px #000;
+    }
+
+    &:active,
+    &:focus {
       box-shadow: none;
+      outline: none;
     }
   }
 }
@@ -337,12 +372,12 @@ hr {
 
 .about_us {
   p {
-    text-align: center;
+    text-align: left;
     color: $secColor;
     font-family: $secFont;
     font-size: .9rem;
     line-height: 1.4rem;
-    padding: 0 5px 5px 5px;
+    padding: 0 10px 5px 10px;
   }
 
   h2 {
@@ -419,7 +454,7 @@ hr {
 
       &:hover {
         transform: scale(1.2);
-
+        cursor: zoom-in;
       }
     }
   }
@@ -495,6 +530,7 @@ hr {
       margin-bottom: 5px;
       font-family: $secFont;
       padding: 3px 0 3px 5px;
+      resize: none;
 
       &:focus {
         outline: 0;
@@ -508,16 +544,15 @@ hr {
       grid-template-columns: 1fr 1fr;
       width: 100%;
 
-      #submit_btn {
-        place-self: end;
-        margin-right: 5px;
-      }
-
       #reset_btn {
         place-self: start;
         color: $secColor;
         margin-left: 5px;
       }
+    }
+
+    #submit_btn {
+      justify-self: end;
     }
 
     #submit_btn,
@@ -538,8 +573,30 @@ hr {
   }
 }
 
+.hours {
+  margin-top: 30px;
+
+  p {
+    color: $secColor;
+    font-family: $secFont;
+    font-style: italic;
+    line-height: 20px;
+
+    span {
+      font-style: normal;
+    }
+  }
+}
+
 .lb_image {
   display: none;
+  cursor: default;
+
+  img {
+    border: 5px solid $secColor;
+    border-radius: 5px;
+    cursor: zoom-out;
+  }
 }
 
 .no_deco {
@@ -554,6 +611,12 @@ hr {
 }
 
 @media only screen and (min-width: 1000px) {
+
+  hr {
+    &:last-child {
+      margin-top: 35px;
+    }
+  }
 
   .sticky_header {
     background: $altColor;
@@ -710,6 +773,7 @@ hr {
 
     &:target {
       display: block;
+      animation: fade-in-fwd 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     }
 
     >img {
