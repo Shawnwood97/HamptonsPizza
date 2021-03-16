@@ -49,3 +49,8 @@ html {
   object-fit: cover;
   object-position: 50% 50%;
 }
+
+@mixin relative-grid {
+  display: grid;
+  position: relative;
+}

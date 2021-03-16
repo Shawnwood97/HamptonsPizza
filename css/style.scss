@@ -52,8 +52,7 @@ h3 {
 }
 
 .splash {
-  position: relative;
-  display: grid;
+  @include relative-grid;
 
   >img {
     width: 100%;
@@ -107,7 +106,6 @@ h3 {
 
 
     &:hover {
-      // background: $mainColor;
       background-position: -100% 90%;
       color: $altColor;
       text-shadow: none;
@@ -219,8 +217,7 @@ label {
 // Menu Page Styling
 
 .half_splash {
-  position: relative;
-  display: grid;
+  @include relative-grid;
 
   .splash_text {
     margin-top: 80px;
@@ -268,7 +265,6 @@ hr {
     &:checked+label {
       border-bottom: 2px solid $mainColor;
     }
-
   }
 
   >label {
@@ -415,12 +411,11 @@ hr {
 
 
 .gallery_container {
-  display: grid;
+  @include relative-grid;
   grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: 300px 100px;
   gap: 10px;
   grid-auto-flow: dense;
-  position: relative;
 
   .span_w1,
   .span_w2,
