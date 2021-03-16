@@ -598,9 +598,9 @@ hr {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 999px) {
+@media only screen and (min-width: 660px) {
   .container {
-    max-width: 550px;
+    max-width: 700px;
     margin: auto;
   }
 
@@ -666,6 +666,11 @@ hr {
 
 @media only screen and (min-width: 1000px) {
 
+  .container {
+    max-width: 1000px;
+    margin: auto;
+  }
+
   hr {
     &:last-child {
       margin-top: 35px;
@@ -724,7 +729,7 @@ hr {
   }
 
   .caro_box {
-    @include resp-grid(250px);
+    @include resp-grid(300px);
     column-gap: 10px;
 
     >.empty_space {
